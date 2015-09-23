@@ -7,6 +7,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
+# testing configuration of Rstudio with Github
 
 ## Write a short comment describing this function
 
