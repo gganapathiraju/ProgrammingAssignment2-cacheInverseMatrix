@@ -80,22 +80,40 @@ cacheSolve <- function(x, ...) {
 
 
 ## TEST CASES
-## (1) Identity Matrix
+## Test Case (1) Identity Matrix
 ##     Inverse of Identify Matrix should yield Identity Matrix
 ##     You can create an identify matrix using "diag (n)" where n is the size
 ##        x<- diag(7). Uncomment the following lines (You can use Cont-Shift-C to
 ##        toggle comment/ no comments for selected lines)
 ##
-#     x<- diag(7)
-#     print (cacheSolve(makeCacheMatrix(x)))
+
+#      y <- diag(7)
+#      print
+#      print ("Original Matrix")
+#      print (y)
+#      x<- makeCacheMatrix(diag(7))
+#      print ("The inverse")
+#      print ("Computing for the FIRST Time")
+#      print (cacheSolve(x))
+#      print ("Computing the inverse SECOND time")
+#      print (cacheSolve(x))
+     
 #
-##  (2) Simple matrix (See: http://www.mathwords.com/i/inverse_of_a_matrix.htm)
+##  Test Case (2) Simple matrix 
+##  (See: http://www.mathwords.com/i/inverse_of_a_matrix.htm)
 ##        x <- matrix(c(4,3,3,2), 2,2). Its inverse is: matrix(c(-2,3,3,-4),2,2)
 ##        Uncomment the following lines
-##
-#      x <- matrix(c(4,3,3,2), 2,2)
-#      print (cacheSolve(makeCacheMatrix(x)))
-##
+#
+#      print
+#      y <- matrix(c(4,3,3,2), 2,2)
+#      print ("Original Matrix")
+#      print (y)
+#      x <- makeCacheMatrix(y)
+#      print ("Computing for the FIRST Time")
+#      print (cacheSolve(x))
+#      print ("Computing the inverse SECOND time")
+#      print (cacheSolve(x))
+#
 ##  (3) A little more realistic case of matrix of arbitrary random real numbers
 ##        Uncomment the following lines.One way to easily verify that the inverse
 ##        matrix generated ir right is to compute x multiplied by inverse 
@@ -104,8 +122,15 @@ cacheSolve <- function(x, ...) {
 ##        result should be an identify matrix. Notice carefully that non-diagonal
 ##        elements are very close to zero (large negative exponent of e)
 ##
-#      x <- matrix(rnorm(100), 10,10)
-#      print (x %*% (cacheSolve(makeCacheMatrix(x))))
+#           print
+#           y <- matrix(rnorm(64), 8, 8)
+#           print ("Original Matrix")
+#           print (y)
+#           x <- makeCacheMatrix(y)
+#           print ("Computing for the FIRST Time")
+#           print (cacheSolve(x))
+#           print ("Computing the inverse SECOND time")
+#           print (cacheSolve(x))
 
 ############################################################################
 
